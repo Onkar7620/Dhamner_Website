@@ -101,14 +101,14 @@ export default function Navbar() {
       {/* 🔝 TOP HEADER */}
       <div className="bg-white px-4 lg:px-10 py-4 flex flex-col lg:flex-row justify-between items-center gap-4">
 
-        <div className="flex items-center gap-3">
-          <img src="/src/assets/adachiwadi-all-logo-e1759995738129.png" className="h-10 lg:h-14" />
-          <img src="/src/assets/Seal_of_Maharashtra.svg.png" className="h-10 lg:h-14" />
-          <img src="/src/assets/GP-Adachiwadi-Logo-Transperent-2.webp" className="h-10 lg:h-14" />
+       <div className="flex items-center">
+            <img src="/assets/HD-wallpaper-satyamev-jayate-bharat-civil-service-history-ias-india-indian-ips-lion-emblem-motivation.jpg" className="h-[100px] w-50" />
+            <img src="/assets/Seal_of_Maharashtra.svg.png" className="h-[60px] ml-[-20px]" />
+            <img src="/assets/Gemini_Generated_Image_7qc6v97qc6v97qc6-removebg-preview.png" className="h-[70px] " />
 
           <div>
             <h1 className="text-lg lg:text-3xl font-bold">ग्रामपंचायत धामणेर</h1>
-            <p className="text-sm text-orange-500">ता. रहमदपूर , जि. सातारा</p>
+            <p className="text-sm text-orange-500">ता - कोरेगाव, जि - सातारा</p>
           </div>
         </div>
 
