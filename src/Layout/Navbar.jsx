@@ -1,35 +1,120 @@
-import { Mail, Phone, Clock, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Mail, Phone, Clock, Menu, X, ChevronDown } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [activeMenu, setActiveMenu] = useState(null); // ⭐ NEW
+
+  const menuItems = [
+    { name: "मुख्य पृष्ठ", link: "/" },
+
+    {
+      name: "आमच्याविषयी",
+      link: "/about",
+      dropdown: [
+        { name: "आमच्याबद्दल", link: "/about" },
+        { name: "अधिकारी/पदाधिकारी", link: "/officers" },
+        { name: "कार्यकारी मंडळ व समित्या", link: "/committee" },
+        { name: "फोटो गॅलरी", link: "/gallery" },
+      ],
+    },
+
+    {
+      name: "शासकीय योजना",
+      link: "/schemes",
+      dropdown: [
+        { name: "जलजीवन मिशन", link: "/jaljeevan" },
+        { name: "आयुष्मान भारत योजना", link: "/ayushman" },
+        { name: "पेसा निधी योजना", link: "/pesa" },
+        { name: "प्रधानमंत्री मातृ वंदना योजना", link: "/pmmv" },
+        { name: "भाग्यश्री योजना", link: "/ladki" },
+        { name: "रमाई आवास योजना", link: "/ramai" },
+        { name: "लाडकी बहिण योजना", link: "/ladki-bahin" },
+        { name: "शहरी आवास योजना", link: "/urban" },
+        { name: "स्वच्छ भारत मिशन", link: "/swachh" },
+        { name: "१५वा वित्त आयोग", link: "/finance15" },
+      ],
+    },
+
+    {
+      name: "लाभार्थी योजना",
+      link: "/beneficiary",
+      dropdown: [
+        { name: "शहरी आवास योजना", link: "/urban" },
+        { name: "रमाई आवास योजना", link: "/ramai" },
+      ],
+    },
+
+    {
+      name: "सोई सुविधा",
+      link: "/services",
+      dropdown: [
+        { name: "कर भरणा", link: "/tax" },
+        { name: "स्वयंघोषणापत्रे", link: "/self" },
+        { name: "महत्वाच्या लिंक", link: "/links" },
+        { name: "तक्रार विभाग", link: "/complaint" },
+        { name: "मनरेगा", link: "/mnrega" },
+        { name: "आधार दुरुस्ती", link: "/aadhaar" },
+      ],
+    },
+
+    {
+      name: "विभाग",
+      link: "/department",
+      dropdown: [
+        { name: "कृषी", link: "/agriculture" },
+        { name: "आरोग्य", link: "/health" },
+        { name: "पशुसंवर्धन", link: "/animal" },
+      ],
+    },
+
+    {
+      name: "दाखले",
+      link: "/documents",
+      dropdown: [
+        { name: "जन्म प्रमाणपत्र", link: "/birth" },
+        { name: "मृत्यू प्रमाणपत्रासाठी अर्ज", link: "/death" },
+        { name: "विवाह प्रमाणपत्र अर्ज", link: "/marriage" },
+        { name: "रहिवासी प्रमाणपत्र", link: "/residence" },
+        { name: "व्यवसाय परवाना प्रमाणपत्र", link: "/business" },
+        { name: "मालमत्ता प्रमाणपत्र", link: "/property" },
+        { name: "बांधकाम परवानगी अर्ज", link: "/construction" },
+        { name: "थकबाकी नसल्याचे प्रमाणपत्र", link: "/no-dues" },
+        { name: "वयाचा दाखला", link: "/age-proof" },
+        { name: "दारिद्र्य प्रमाणपत्र", link: "/bpl" },
+        { name: "जमिनीचा उतारा", link: "/land-record" },
+        { name: "७/१२ उतारा", link: "/712" },
+        { name: "प्रॉपर्टी कार्ड", link: "/property-card" },
+        { name: "मालमत्ता हस्तांतरण", link: "/transfer" },
+      ],
+    },
+
+    { name: "नकाशा", link: "/map" },
+    { name: "माहितीचा अधिकार", link: "/rti" },
+    { name: "हेल्पलाईन", link: "/help" },
+  ];
 
   return (
-    <div className="w-full shadow-sm">
+    <div className="w-full shadow-sm sticky top-0 z-50">
 
-      {/* Top Header */}
-      <div className="flex justify-between items-center px-4 lg:px-10 py-4 bg-white">
+      {/* 🔝 TOP HEADER */}
+      <div className="bg-white px-4 lg:px-10 py-4 flex flex-col lg:flex-row justify-between items-center gap-4">
 
-        {/* Left Logos + Title */}
         <div className="flex items-center gap-3">
-          <img src="/src/assets/adachiwadi-all-logo-e1759995738129.png" className="h-10 lg:h-15" />
-          <img src="/src/assets/Seal_of_Maharashtra.svg.png" className="h-10 lg:h-15x`" />
-          <img src="/src/assets/GP-Adachiwadi-Logo-Transperent-2.webp" className="h-10 lg:h-15" />
+          <img src="/src/assets/adachiwadi-all-logo-e1759995738129.png" className="h-10 lg:h-14" />
+          <img src="/src/assets/Seal_of_Maharashtra.svg.png" className="h-10 lg:h-14" />
+          <img src="/src/assets/GP-Adachiwadi-Logo-Transperent-2.webp" className="h-10 lg:h-14" />
 
-          <div className="hidden sm:block">
-            <h1 className="text-lg lg:text-3xl font-bold">ग्रामपंचायत</h1>
-            <h2 className="text-lg lg:text-3xl font-bold">धामणेर </h2>
-            <p className="text-xs lg:text-sm text-orange-500">
-              ता. रहमदपूर , जि. सातारा
-            </p>
+          <div>
+            <h1 className="text-lg lg:text-3xl font-bold">ग्रामपंचायत धामणेर</h1>
+            <p className="text-sm text-orange-500">ता. रहमदपूर , जि. सातारा</p>
           </div>
         </div>
 
-        {/* Right Contact Info (Hidden on mobile) */}
         <div className="hidden lg:flex gap-10 text-gray-700">
-
           <div className="flex items-center gap-2">
-            <Mail size={22} />
+            <Mail size={20} />
             <div>
               <p className="font-semibold">ईमेल</p>
               <p className="text-sm">dhamner123@gmail.com</p>
@@ -37,7 +122,7 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-2">
-            <Clock size={22} />
+            <Clock size={20} />
             <div>
               <p className="font-semibold">कार्यालयीन वेळ</p>
               <p className="text-sm">सकाळी १० ते सायंकाळी ६</p>
@@ -45,61 +130,92 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-2">
-            <Phone size={22} />
+            <Phone size={20} />
             <div>
-              <p className="font-semibold">दूरध्वनी क्रमांक</p>
+              <p className="font-semibold">दूरध्वनी</p>
               <p className="text-sm">+91 9607075206</p>
             </div>
           </div>
-
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="lg:hidden"
-          onClick={() => setOpen(!open)}
-        >
+        <button className="lg:hidden" onClick={() => setOpen(!open)}>
           {open ? <X size={28} /> : <Menu size={28} />}
         </button>
-
       </div>
 
-      <hr />
+      {/* 🔻 DESKTOP NAV (unchanged) */}
+      <div className="hidden lg:flex justify-center gap-8 py-4 bg-gray-100 text-lg font-medium">
+        {menuItems.map((item, index) => (
+          <div key={index} className="relative group pb-2">
+            <div className="flex items-center gap-1 cursor-pointer hover:text-orange-500">
+              <Link to={item.link} className={index === 0 ? "text-orange-600" : ""}>
+                {item.name}
+              </Link>
+              {item.dropdown && <ChevronDown size={16} />}
+            </div>
 
-      {/* Desktop Navigation */}
-      <div className="hidden lg:block bg-gray-100 border-t">
-        <ul className="flex justify-center gap-10 py-4 font-medium text-lg">
-          <li className="text-orange-600 cursor-pointer">मुख्य पृष्ठ</li>
-          <li className="cursor-pointer hover:text-orange-500">आमच्याविषयी</li>
-          <li className="cursor-pointer hover:text-orange-500">शासकीय योजना</li>
-          <li className="cursor-pointer hover:text-orange-500">लाभार्थी योजना</li>
-          <li className="cursor-pointer hover:text-orange-500">सोई सुविधा</li>
-          <li className="cursor-pointer hover:text-orange-500">विभाग</li>
-          <li className="cursor-pointer hover:text-orange-500">दाखले</li>
-          <li className="cursor-pointer hover:text-orange-500">नकाशा</li>
-          <li className="cursor-pointer hover:text-orange-500">माहितीचा अधिकार</li>
-          <li className="cursor-pointer hover:text-orange-500">हेल्पलाईन</li>
-        </ul>
+            {item.dropdown && (
+              <div className="absolute left-0 top-full w-64 max-h-80 overflow-y-auto bg-slate-800 text-white shadow-xl rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                {item.dropdown.map((sub, i) => (
+                  <Link key={i} to={sub.link} className="block px-4 py-3 border-b border-slate-700 hover:bg-orange-500 hover:pl-6 transition">
+                    {sub.name}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
       </div>
 
-      {/* Mobile Menu */}
+      {/* 📱 MOBILE MENU WITH DROPDOWN */}
       {open && (
-        <div className="lg:hidden bg-gray-100 border-t">
-          <ul className="flex flex-col gap-4 px-6 py-6 font-medium">
-            <li>मुख्य पृष्ठ</li>
-            <li>आमच्याविषयी</li>
-            <li>शासकीय योजना</li>
-            <li>लाभार्थी योजना</li>
-            <li>सोई सुविधा</li>
-            <li>विभाग</li>
-            <li>दाखले</li>
-            <li>नकाशा</li>
-            <li>माहितीचा अधिकार</li>
-            <li>हेल्पलाईन</li>
-          </ul>
+        <div className="lg:hidden bg-gray-100 px-6 py-6 space-y-4 max-h-[80vh] overflow-y-auto">
+
+          {menuItems.map((item, index) => (
+            <div key={index}>
+
+              {/* MAIN */}
+              <div
+                className="flex justify-between items-center font-medium cursor-pointer"
+                onClick={() =>
+                  item.dropdown
+                    ? setActiveMenu(activeMenu === index ? null : index)
+                    : null
+                }
+              >
+                <Link to={item.link}>{item.name}</Link>
+
+                {item.dropdown && (
+                  <ChevronDown
+                    size={18}
+                    className={`transition-transform ${
+                      activeMenu === index ? "rotate-180" : ""
+                    }`}
+                  />
+                )}
+              </div>
+
+              {/* DROPDOWN */}
+              {item.dropdown && activeMenu === index && (
+                <div className="ml-4 mt-2 space-y-2 text-sm text-gray-700">
+                  {item.dropdown.map((sub, i) => (
+                    <Link
+                      key={i}
+                      to={sub.link}
+                      className="block px-3 py-2 rounded hover:bg-orange-500 hover:text-white transition"
+                      onClick={() => setOpen(false)}
+                    >
+                      {sub.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+
+            </div>
+          ))}
+
         </div>
       )}
-
     </div>
   );
 }
