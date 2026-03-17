@@ -80,9 +80,9 @@ export default function Footer() {
 
         {/* Bottom Logos */}
         <div className="flex justify-center items-center gap-4">
-          <img src="/src/assets/adachiwadi-all-logo-e1759995738129.png" className="h-10 " />
-          <img src="/src/assets/Seal_of_Maharashtra.svg.png" className="h-10 " />
-          <img src="/src/assets/GP-Adachiwadi-Logo-Transperent-2.webp" className="h-10 " />
+            <img src="/assets/HD-wallpaper-satyamev-jayate-bharat-civil-service-history-ias-india-indian-ips-lion-emblem-motivation-removebg-preview.png" className="h-[100px] w-50"/>
+            <img src="/assets/Seal_of_Maharashtra.svg.png" className="h-[60px] ml-[-20px]" />
+            <img src="/assets/Gemini_Generated_Image_7qc6v97qc6v97qc6-removebg-preview.png" className="h-[70px] " />
 
           <div className="text-left">
             <p className="font-bold text-lg">ग्रामपंचायत</p>

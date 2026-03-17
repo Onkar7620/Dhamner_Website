@@ -96,13 +96,13 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="w-full shadow-sm sticky top-0 z-50">
+    <div className="w-full shadow-sm  top-0 z-50">
 
       {/* 🔝 TOP HEADER */}
       <div className="bg-white px-4 lg:px-10 py-4 flex flex-col lg:flex-row justify-between items-center gap-4">
 
        <div className="flex items-center">
-            <img src="/assets/HD-wallpaper-satyamev-jayate-bharat-civil-service-history-ias-india-indian-ips-lion-emblem-motivation.jpg" className="h-[100px] w-50" />
+            <img src="/assets/HD-wallpaper-satyamev-jayate-bharat-civil-service-history-ias-india-indian-ips-lion-emblem-motivation-removebg-preview.png" className="h-[100px] w-50" />
             <img src="/assets/Seal_of_Maharashtra.svg.png" className="h-[60px] ml-[-20px]" />
             <img src="/assets/Gemini_Generated_Image_7qc6v97qc6v97qc6-removebg-preview.png" className="h-[70px] " />
 
@@ -117,7 +117,7 @@ export default function Navbar() {
             <Mail size={20} />
             <div>
               <p className="font-semibold">ईमेल</p>
-              <p className="text-sm">dhamner123@gmail.com</p>
+              <p className="text-sm">yashwantgrampanchayatdhamner.in</p>
             </div>
           </div>
 
@@ -133,7 +133,7 @@ export default function Navbar() {
             <Phone size={20} />
             <div>
               <p className="font-semibold">दूरध्वनी</p>
-              <p className="text-sm">+91 9607075206</p>
+              <p className="text-sm">+91 9850032987</p>
             </div>
           </div>
         </div>

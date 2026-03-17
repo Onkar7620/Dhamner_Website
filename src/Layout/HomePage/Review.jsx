@@ -1,7 +1,6 @@
 export default function Review() {
-    return (
-        <section className="w-full bg-gray-100 py-16 px-6 md:px-16">
-      
+  return (
+    <section className="w-full bg-gray-100 py-16 px-6 md:px-16">
       {/* Heading */}
       <div className="text-center mb-14">
         <h2 className="text-4xl font-bold text-gray-800">
@@ -15,27 +14,15 @@ export default function Review() {
         </div>
 
         <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-          आपले विचार आम्हाला सांगा – कारण तुमचा अनुभव आमच्या प्रगतीचा मार्गदर्शक आहे.
+          आपले विचार आम्हाला सांगा – कारण तुमचा अनुभव आमच्या प्रगतीचा मार्गदर्शक
+          आहे.
         </p>
       </div>
 
-
       {/* Content */}
-      <div className="grid md:grid-cols-2 gap-10 items-center">
-
-        {/* Left Illustration */}
-        <div className="flex justify-center">
-          <img
-            src="/src/assets/image.png"
-            alt="mail illustration"
-            className="max-w-md w-full"
-          />
-        </div>
-
-
+      <div className="flex justify-center items-center">
         {/* Form */}
-        <form className="space-y-6">
-
+        <form className="space-y-6 w-full max-w-2xl">
           {/* Name Row */}
           <div className="grid md:grid-cols-2 gap-6">
             <div>
@@ -61,7 +48,6 @@ export default function Review() {
             </div>
           </div>
 
-
           {/* Email */}
           <div>
             <label className="font-semibold">
@@ -73,7 +59,6 @@ export default function Review() {
               className="w-full mt-2 border rounded-lg px-4 py-3 focus:ring-2 focus:ring-green-500 outline-none"
             />
           </div>
-
 
           {/* Subject */}
           <div>
@@ -87,7 +72,6 @@ export default function Review() {
             />
           </div>
 
-
           {/* Message */}
           <div>
             <label className="font-semibold">
@@ -100,7 +84,6 @@ export default function Review() {
             ></textarea>
           </div>
 
-
           {/* Submit Button */}
           <button
             type="submit"
@@ -108,9 +91,8 @@ export default function Review() {
           >
             Submit Form
           </button>
-
         </form>
       </div>
     </section>
-    )
+  );
 }
