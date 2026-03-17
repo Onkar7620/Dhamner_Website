@@ -2,20 +2,20 @@ export default function Member(){
     const officials = [
     {
       id: 1,
-      name: "सुवर्णा बजरंग पवार",
+      name: "श्री.चंद्रकांत शंकर व्होवाळे",
       role: "सरपंच",
       image: "/sarpanch.jpg",
     },
     {
       id: 2,
-      name: "मोहन निवृत्ती पवार",
+      name: "श्री.प्रविण वामन क्षीरसागर",
       role: "उपसरपंच",
       image: "/upsarpanch.jpg",
     },
     {
       id: 3,
       name: "अनिल श्रीकांत हिरासकर",
-      role: "ग्रामपंचायत अधिकारी",
+      role: "आदर्श सरपंच",
       image: "/officer.jpg",
     },
   ];

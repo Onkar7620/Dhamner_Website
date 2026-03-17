@@ -1,11 +1,11 @@
 export default function News() {
        const videos = [
-    "https://www.youtube.com/embed/qK14LHYb6XA?si=xBDdjcj191kQtYWX",
-    "https://www.youtube.com/embed/watch?v=NHk7scrb_9I",
-    "https://www.youtube.com/embed/VIDEO_ID3",
-    "https://www.youtube.com/embed/VIDEO_ID4",
-    "https://www.youtube.com/embed/VIDEO_ID5",
-    "https://www.youtube.com/embed/VIDEO_ID6",
+    "https://www.youtube.com/embed/EgxvpZ44H0g?si=5hnuqzzgUNAZ2DfA",
+    "https://www.youtube.com/embed/DSRRktI0REo?si=y0uaHaN3fDcRgwpH" ,
+    "https://www.youtube.com/embed/YewY9dZYCuY?si=yNLdzpf1itezDdD1",
+    "https://www.youtube.com/embed/CDBfnjJ2jTo?si=BlyuC2X-A3hIugZe ",
+    "https://www.youtube.com/embed/iljwt5SiXh8?si=9fFbWJ8oiCw0gAZW",
+    "https://www.youtube.com/embed/DXZTiEAIdMk?si=p906KBL8YZtT16ZK",
   ];
     return (
         <section className="bg-gray-100 py-16 px-6 md:px-16">
