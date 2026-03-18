@@ -12,7 +12,7 @@ export default function FinanceCommission15() {
         </h1>
 
 <img
-  src="/public/assets/HD-wallpaper-satyamev-jayate-bharat-civil-service-history-ias-india-indian-ips-lion-emblem-motivation-removebg-preview.png"
+  src="/assets/HD-wallpaper-satyamev-jayate-bharat-civil-service-history-ias-india-indian-ips-lion-emblem-motivation-removebg-preview.png"
   alt="finance commission"
   className="w-56 sm:w-72 md:w-[420px] lg:w-[520px] xl:w-[600px] h-auto object-contain"
 />

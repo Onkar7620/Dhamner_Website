@@ -12,7 +12,7 @@ export default function LadkiBahin() {
         </h1>
 
         <img
-          src="/public/assets/ladki-bahin.png"
+          src="/assets/ladki-bahin.png"
           alt="ladki bahin"
           className="w-64 md:w-[420px] lg:w-[520px] object-contain"
         />

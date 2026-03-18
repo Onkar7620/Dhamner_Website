@@ -12,7 +12,7 @@ export default function PesaScheme() {
         </h1>
 
         <img
-          src="/public/assets/Pesa-Logo.png"
+          src="/assets/Pesa-Logo.png"
           alt="pesa"
           className="w-64 md:w-[420px] lg:w-[520px]"
         />

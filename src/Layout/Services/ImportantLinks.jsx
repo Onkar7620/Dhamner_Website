@@ -166,7 +166,7 @@ export default function ImportantLinks() {
 
         <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
           <img
-            src="/public/assets/Browser-Links-Logo.png"
+            src="/assets/Browser-Links-Logo.png"
             alt="links"
             className="w-64 md:w-96 lg:w-[420px]"
           />

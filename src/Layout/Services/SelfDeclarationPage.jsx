@@ -4,35 +4,35 @@ export default function SelfDeclarationPage() {
   const pdfs = [
     {
       name: "कोणत्याही-योजनेचा-लाभ-न-घेतल्याचे-स्वयंघोषणापत्र",
-      file: "/public/Pdfs/कोणत्याही-योजनेचा-लाभ-न-घेतल्याचे-स्वयंघोषणापत्र.pdf",
+      file: "/Pdfs/कोणत्याही-योजनेचा-लाभ-न-घेतल्याचे-स्वयंघोषणापत्र.pdf",
     },
     {
       name: "परितव्या-असल्याबाबत-स्वयंघोषणापत्र",
-      file: "/public/Pdfs/परितक्या-असल्याबाबत-स्वयंघोषणापत्र.pdf",
+      file: "/Pdfs/परितक्या-असल्याबाबत-स्वयंघोषणापत्र.pdf",
     },
     {
       name: "रहिवाशी-दाखला-स्व-घोषणापत्र",
-      file: "/public/Pdfs/रहिवाशी-दाखला-स्व-घोषणापत्र.pdf",
+      file: "/Pdfs/रहिवाशी-दाखला-स्व-घोषणापत्र.pdf",
     },
     {
       name: "विधवा-असल्याबाबत-स्वयंघोषणापत्र",
-      file: "/public/Pdfs/विधवा-असल्याबाबत-स्वयंघोषणापत्र.pdf",
+      file: "/Pdfs/विधवा-असल्याबाबत-स्वयंघोषणापत्र.pdf",
     },
     {
       name: "विभक्त-कुटुंब-असल्यास-स्वयंघोषणापत्र",
-      file: "/public/Pdfs/विभक्त-कुटुंब-असल्यास-स्वयंघोषणापत्र.pdf",
+      file: "/Pdfs/विभक्त-कुटुंब-असल्यास-स्वयंघोषणापत्र.pdf",
     },
     {
       name: "वीज-जोडणी-स्वयंघोषणापत्र",
-      file: "/public/Pdfs/वीज-जोडणी-स्वयंघोषणापत्र.pdf",
+      file: "/Pdfs/वीज-जोडणी-स्वयंघोषणापत्र.pdf",
     },
     {
       name: "शौचालय-असल्याबाबत-स्वयंघोषणापत्र",
-      file: "/public/Pdfs/शौचालय-असल्याबाबत-स्वयंघोषणापत्र.pdf",
+      file: "/Pdfs/शौचालय-असल्याबाबत-स्वयंघोषणापत्र.pdf",
     },
     {
       name: "हयात-असल्याबाबत-स्वयंघोषणापत्र",
-      file: "/public/Pdfs/हयात-असल्याबाबत-स्वयंघोषणापत्र.pdf",
+      file: "/Pdfs/हयात-असल्याबाबत-स्वयंघोषणापत्र.pdf",
     },
   ];
 
@@ -52,7 +52,7 @@ export default function SelfDeclarationPage() {
         {/* RIGHT IMAGE */}
         <div className="w-full md:w-1/2 flex justify-center mt-10 md:mt-0">
           <img
-            src="/public/assets/Documents-Logo.png"
+            src="/assets/Documents-Logo.png"
             alt="form"
             className="w-64 md:w-96 lg:w-[420px] object-contain"
           />

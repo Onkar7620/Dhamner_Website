@@ -12,7 +12,7 @@ export default function SwachhBharat() {
         </h1>
 
         <img
-          src="/public/assets/Swachh_Bharat_Mission_Logo.svg.png"
+          src="/assets/Swachh_Bharat_Mission_Logo.svg.png"
           alt="swachh bharat"
           className="w-64 md:w-[420px] lg:w-[520px] object-contain"
         />

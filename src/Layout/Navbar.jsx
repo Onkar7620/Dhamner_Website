@@ -40,7 +40,7 @@ export default function Navbar() {
       name: "लाभार्थी योजना",
       link: "/beneficiary",
       dropdown: [
-        { name: "शहरी आवास योजना", link: "/shabari" },
+        { name: "शबरी आवास योजना", link: "/shabari" },
         { name: "रमाई आवास योजना", link: "/ramai" },
       ],
     },

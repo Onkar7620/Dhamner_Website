@@ -14,7 +14,7 @@ export default function Ayushman() {
 
         {/* Image */}
         <img
-          src="/public/assets/Ayushman-Logo.png"
+          src="/assets/Ayushman-Logo.png"
           alt="pmjay"
           className="w-64 md:w-[420px] lg:w-[520px] object-contain"
         />

@@ -12,7 +12,7 @@ export default function PMMVY() {
         </h1>
 
         <img
-          src="/public/assets/Pradhan_Mantri_Matritva_Vandana_Yojana-removebg-preview.png"
+          src="/assets/Pradhan_Mantri_Matritva_Vandana_Yojana-removebg-preview.png"
           alt="PMMVY"
           className="w-64 md:w-[420px] lg:w-[520px] object-contain"
         />

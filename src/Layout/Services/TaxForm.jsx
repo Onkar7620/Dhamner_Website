@@ -66,7 +66,7 @@ export default function TaxPage() {
         </div>
 
         <img
-          src="/public/assets/Tax-logo.jpg"
+          src="/assets/Tax-logo.jpg"
           alt="tax"
           className="w-64 md:w-96 mt-10 md:mt-0"
         />
@@ -114,7 +114,7 @@ export default function TaxPage() {
 
           <div className="text-center">
             <img
-              src="/public/assets/Screenshot 2026-03-18 184220.png"
+              src="/assets/Screenshot 2026-03-18 184220.png"
               alt="gram nidhi"
               className="mx-auto w-64 md:w-72 rounded-lg shadow hover:scale-105 transition"
             />
@@ -125,7 +125,7 @@ export default function TaxPage() {
 
           <div className="text-center">
             <img
-              src="/public/assets/Screenshot 2026-03-18 184220.png"
+              src="/assets/Screenshot 2026-03-18 184220.png"
               alt="pani patti"
               className="mx-auto w-64 md:w-72 rounded-lg shadow hover:scale-105 transition"
             />

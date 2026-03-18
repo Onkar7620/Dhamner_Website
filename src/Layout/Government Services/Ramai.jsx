@@ -12,7 +12,7 @@ export default function Ramai() {
         </h1>
 
         <img
-          src="/public/assets/Ramai-removebg-preview.png"
+          src="/assets/Ramai-removebg-preview.png"
           alt="house"
           className="w-64 md:w-[420px] lg:w-[520px] object-contain"
         />

@@ -12,7 +12,7 @@ export default function Bhagyashree() {
         </h1>
 
         <img
-          src="/public/assets/bhagyashree-removebg-preview.png"
+          src="/assets/bhagyashree-removebg-preview.png"
           alt="ladki"
           className="w-64 md:w-[420px] lg:w-[520px] object-contain"
         />
