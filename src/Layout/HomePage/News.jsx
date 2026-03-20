@@ -1,11 +1,13 @@
 export default function News() {
        const videos = [
-    "https://www.youtube.com/embed/EgxvpZ44H0g?si=5hnuqzzgUNAZ2DfA",
-    "https://www.youtube.com/embed/DSRRktI0REo?si=y0uaHaN3fDcRgwpH" ,
-    "https://www.youtube.com/embed/YewY9dZYCuY?si=yNLdzpf1itezDdD1",
-    "https://www.youtube.com/embed/CDBfnjJ2jTo?si=BlyuC2X-A3hIugZe ",
-    "https://www.youtube.com/embed/iljwt5SiXh8?si=9fFbWJ8oiCw0gAZW",
-    "https://www.youtube.com/embed/DXZTiEAIdMk?si=p906KBL8YZtT16ZK",
+    "https://youtube.com/embed/FN7QBVjCBxM?si=lVBf0a97KfOSZDty",
+    "https://youtube.com/embed/HqN0d6HpTjU?si=vpIq2DWiHIrqM59r " ,
+    "https://youtube.com/embed/NSIXFFlKhos?si=5vzmcN-fiHu6yAyc",
+    "https://www.youtube.com/embed/DSRRktI0REo?si=y0uaHaN3fDcRgwpH",
+    "https://youtube.com/embed/f2EKQA-hyFA?si=LQFKxD69nGJZE97d",
+    "https://youtube.com/embed/SwY8RHOrBOs?si=hKyoQI9c6Ira9UT8",
+    "https://youtube.com/embed/fV5yQNFEaL8?si=f3P0HP9q31JCqecM",
+   " https://youtube.com/embed/6beR96r-sQA?si=OzTqR8TVX5PyFTWw",
   ];
     return (
         <section className="bg-gray-100 py-16 px-6 md:px-16">

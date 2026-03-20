@@ -90,8 +90,8 @@ export default function Navbar() {
     },
 
     { name: "नकाशा", link: "/map" },
-    { name: "माहितीचा अधिकार", link: "/rti" },
-    { name: "हेल्पलाईन", link: "/help" },
+    { name: "धामणेरची यशोगाथा ", link: "/yashogatha" },
+    { name: "संपर्क ", link: "/help" },
   ];
 
   return (
@@ -106,7 +106,7 @@ export default function Navbar() {
             <img src="/assets/Gemini_Generated_Image_7qc6v97qc6v97qc6-removebg-preview.png" className="h-[70px] " />
 
           <div>
-            <h1 className="text-lg lg:text-3xl font-bold">ग्रामपंचायत धामणेर</h1>
+            <h1 className="text-lg lg:text-3xl font-bold">यशवंत ग्रामपंचायत धामणेर</h1>
             <p className="text-sm text-orange-500">ता - कोरेगाव, जि - सातारा</p>
           </div>
         </div>
@@ -116,7 +116,7 @@ export default function Navbar() {
             <Mail size={20} />
             <div>
               <p className="font-semibold">ईमेल</p>
-              <p className="text-sm">yashwantgrampanchayatdhamner.in</p>
+              <p className="text-sm">dhamner189585@gmail.com</p>
             </div>
           </div>
 
@@ -124,7 +124,7 @@ export default function Navbar() {
             <Clock size={20} />
             <div>
               <p className="font-semibold">कार्यालयीन वेळ</p>
-              <p className="text-sm">सकाळी १० ते सायंकाळी ६</p>
+              <p className="text-sm">सकाळी ९.१५ ते सायंकाळी ६.१५ </p>
             </div>
           </div>
 

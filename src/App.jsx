@@ -18,6 +18,12 @@ import FinanceCommission15 from './Layout/Government Services/FinanceCommission1
 import TaxForm from './Layout/Services/TaxForm.jsx';
 import SelfDeclarationPage from './Layout/Services/SelfDeclarationPage.jsx';
 import ImportantLinks from './Layout/Services/ImportantLinks.jsx';
+import Krushi from './Layout/Division/agriculture.jsx';
+import PashuSanvardhan from "./Layout/Division/animal.jsx";
+import Contact from "./Layout/Contact/contact.jsx";
+import Map from "./Layout/Map/map.jsx";
+import Health from "./Layout/Division/health.jsx";
+import Yashogatha from "./Yashogatha/yashogatha.jsx";
 
 import { Routes, Route } from "react-router-dom";
 
@@ -47,6 +53,13 @@ function App() {
       <Route path='/tax' element={<TaxForm/>}/>
       <Route path='/self' element={<SelfDeclarationPage/>}/>
       <Route path='/links' element={<ImportantLinks/>}/>
+      <Route path='/agriculture' element={<Krushi />} />
+      <Route path='/animal' element={<PashuSanvardhan />} />
+      <Route path='/help' element={<Contact />} />
+      <Route path='/map' element={<Map />} />
+      <Route path='/health' element={<Health />} />
+      <Route path='/yashogatha' element={<Yashogatha />} />
+
       </Routes>
 
       <Footer />

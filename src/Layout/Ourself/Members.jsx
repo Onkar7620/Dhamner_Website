@@ -55,45 +55,43 @@ const members = [
 
 export default function Members() {
   return (
-    <div className="w-full bg-gray-100">
+    <div className="w-full bg-gray-100 overflow-x-hidden">
 
       {/* HERO SECTION */}
-      <div className="bg-green-700 py-16">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-white text-5xl font-bold">
+      <div className="bg-green-700 py-10 sm:py-14 md:py-16">
+        <div className="max-w-7xl mx-auto text-center px-4">
+          <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold">
             अधिकारी / पदाधिकारी
           </h1>
         </div>
       </div>
 
-
       {/* MEMBERS SECTION */}
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-14 md:py-16">
 
-        <h2 className="text-center text-3xl font-semibold text-gray-700 mb-9">
+        <h2 className="text-center text-xl sm:text-2xl md:text-3xl font-semibold text-gray-700 mb-8 sm:mb-10">
           ग्रामपंचायत सदस्य व पदाधिकारी
         </h2>
 
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
 
           {members.map((member, index) => (
             <div
               key={index}
-              className="bg-white shadow-md rounded-xl p-6 text-center hover:shadow-xl transition duration-300"
+              className="bg-white shadow-md rounded-xl p-4 sm:p-6 text-center hover:shadow-xl transition duration-300"
             >
 
               <img
                 src={member.img}
                 alt={member.name}
-                className="w-35 h-40 mx-auto rounded-xl object-cover"
+                className="w-28 h-32 sm:w-32 sm:h-36 md:w-36 md:h-40 mx-auto rounded-xl object-cover"
               />
 
-              <h3 className="mt-4 font-semibold text-lg text-gray-800">
+              <h3 className="mt-3 sm:mt-4 font-semibold text-base sm:text-lg text-gray-800">
                 {member.name}
               </h3>
 
-              <p className="text-gray-500 text-sm mt-1">
+              <p className="text-gray-500 text-xs sm:text-sm mt-1">
                 {member.role}
               </p>
 
