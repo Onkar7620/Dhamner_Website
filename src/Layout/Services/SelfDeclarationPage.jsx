@@ -40,7 +40,7 @@ export default function SelfDeclarationPage() {
     <div className="w-full">
 
       {/* ================= HERO ================= */}
-      <div className="bg-gradient-to-r from-green-700 to-green-500 text-white py-16 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between">
+      <div className="bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-600 text-white py-16 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between">
 
         {/* LEFT */}
         <div className="w-full md:w-1/2 text-center md:text-left">

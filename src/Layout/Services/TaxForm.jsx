@@ -55,7 +55,7 @@ export default function TaxPage() {
     <div className="w-full">
 
       {/* ================= HERO ================= */}
-      <div className="bg-gradient-to-r from-green-700 to-green-500 text-white py-16 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between">
+      <div className="bg-gradient-to-r from-teal-400 via-cyan-500 to-blue-600 text-white py-16 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between">
         <div className="max-w-xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             कर भरणा
@@ -114,18 +114,18 @@ export default function TaxPage() {
 
           <div className="text-center">
             <img
-              src="/assets/Screenshot 2026-03-18 184220.png"
+              src="/assets/GramnidhiQr.jpeg"
               alt="gram nidhi"
               className="mx-auto w-64 md:w-72 rounded-lg shadow hover:scale-105 transition"
             />
             <h3 className="text-xl font-semibold text-green-600 mt-4">
-              ग्रामनिधी
+              ग्रामनिधी/घरपट्टी/सॅनिटरी/दिवाबत्ती
             </h3>
           </div>
 
           <div className="text-center">
             <img
-              src="/assets/Screenshot 2026-03-18 184220.png"
+              src="/assets/PaniPattiQr.jpeg"
               alt="pani patti"
               className="mx-auto w-64 md:w-72 rounded-lg shadow hover:scale-105 transition"
             />

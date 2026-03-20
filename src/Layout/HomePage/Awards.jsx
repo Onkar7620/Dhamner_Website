@@ -1,136 +1,83 @@
-import { Trophy } from "lucide-react";
+import { useState } from "react";
+import { Trophy, Search } from "lucide-react";
 
 export default function Awards() {
-    const trophies = [
-{
-    title:
-      "पंचायत राज कमिटीची गावास भेट व कामगिरीबद्दल विशेष प्रशस्तीपत्र",
-    year: "सन २००१ - ०२",
-    },
- {
-    title: "जिल्हा स्तरीय अस्वच्छता निर्मूलनाबाबत प्रथम पुरस्कार",
-    year: "सन २००२",
-  },
- {
-    title:
-      "संत गाडगेबाबा ग्राम स्वच्छता अभियान - जिल्हा स्तरीय प्रथम पुरस्कार",
-    year: "सन २००२ - ०३",
-  },
-  {
-    title:
-      "विभागीय स्तरावरील वसंतराव नाईक पाणी व्यवस्थापन कामाचा प्रथम पुरस्कार",
-    year: "सन २००३ - ०४",
-  },
-{
-    title:
-      "संत गाडगेबाबा ग्राम स्वच्छता अभियान - जिल्हा स्तरीय प्रथम पुरस्कार",
-    year: "सन २००३ - ०४",
-  },
-   {
-    title: "यशवंत ग्रामपंचायतराज अभियान - विभाग स्तर प्रथम पुरस्कार",
-    year: "सन २००४ - ०५",
-  },
-{
-    title:
-      "संत गाडगेबाबा ग्राम स्वच्छता अभियान - जिल्हा स्तरीय प्रथम पुरस्कार",
-    year: "सन २००४ - ०५",
-  },
- {
-    title:
-      "संत गाडगेबाबा ग्राम स्वच्छता अभियान - राज्य स्तरीय प्रथम पुरस्कार",
-    year: "सन २००४ - ०५",
-  },
-{
-    title:
-      "राष्ट्रसंत तुकडोजी महाराज स्वच्छ ग्राम स्पर्धा - विभाग स्तरावर द्वितीय पुरस्कार",
-    year: "सन २००४ - ०५",
-  },
-{
-    title:
-      "मा. राष्ट्रपती ए.पी.जे. अब्दुल कलाम यांचे हस्ते निर्मल ग्राम पुरस्कार",
-    year: "सन २४ फेब्रुवारी २००५",
-  },
-  {
-    title: "राज्य स्तरीय प्रथम क्रमांकाचा 'वनश्री' पुरस्कार",
-    year: "सन २००६ - ०७",
-  },
-  {
-    title:
-      "शाहू, फुले, आंबेडकर दलित वस्ती सुधार अभियानात जिल्हास्तरीय द्वितीय पुरस्कार",
-    year: "सन २००६ - ०७",
-  },
-  
- 
- 
+  const [search, setSearch] = useState("");
 
- 
- 
-  
+  const awards = [
+    { year: "2002-03", text: "संत गाडगेबाबा ग्राम स्वच्छता अभियान - जिल्हा स्तरीय प्रथम पुरस्कार" },
+    { year: "2003-04", text: "संत गाडगेबाबा ग्राम स्वच्छता अभियान - जिल्हा स्तरीय प्रथम पुरस्कार" },
+    { year: "2004-05", text: "संत गाडगेबाबा ग्राम स्वच्छता अभियान - जिल्हा स्तरीय प्रथम पुरस्कार" },
+    { year: "2004-05", text: "राष्ट्रसंत तुकडोजी महाराज स्वच्छ ग्राम स्पर्धा - विभाग स्तरावर द्वितीय पुरस्कार" },
+    { year: "2004-05", text: "संत गाडगेबाबा ग्राम स्वच्छता अभियान - राज्य स्तरीय प्रथम पुरस्कार" },
+    { year: "2005", text: "राष्ट्रपती डॉ. ए.पी.जे. अब्दुल कलाम यांच्या हस्ते निर्मल ग्राम पुरस्कार" },
+    { year: "2007-08", text: "पंचायत राज समिती गाव भेट विशेष प्रशस्तीपत्र" },
+    { year: "2007", text: "जिल्हा स्तरीय अनुसूचित निर्मूलन अभियान प्रथम पुरस्कार" },
+    { year: "2004-05", text: "यशवंत पंचायत राज अभियान - विभाग स्तर प्रथम पुरस्कार" },
+    { year: "2003-04", text: "वसंत राव नाईक पाणी व्यवस्थापन योजना - प्रथम पुरस्कार" },
+    { year: "2006-07", text: "शाहू, फुले, आंबेडकर वस्ती सुधार अभियान - जिल्हा स्तरीय द्वितीय पुरस्कार" },
+    { year: "2006-07", text: "राज्य स्तरीय प्रथम क्रमांकाचा 'वनश्री' पुरस्कार" },
+    { year: "2016-17", text: "तालुका स्तरीय स्मार्ट ग्राम - प्रथम पुरस्कार" },
+    { year: "2016-17", text: "जिल्हा स्मार्ट ग्राम - प्रथम पुरस्कार" },
+    { year: "2016-17", text: "डॉ. बाबासाहेब आंबेडकर वस्ती - जिल्हा प्रथम पुरस्कार" },
+    { year: "2017-18", text: "संत गाडगेबाबा ग्रामस्वच्छता अभियान - जिल्हा स्तरीय तृतीय क्रमांक" },
+    { year: "2018-19", text: "तालुका स्मार्ट ग्राम - प्रथम पुरस्कार" },
+    { year: "2018-19", text: "जिल्हा स्मार्ट ग्राम - प्रथम पुरस्कार" },
+    { year: "2023", text: "'ग्रीन व्हिलेज' प्रथम पुरस्कार भारत फोर्ज लि. पुणे" },
+  ];
 
-  
- 
-];
+  const filteredAwards = awards.filter((award) =>
+    award.text.toLowerCase().includes(search.toLowerCase())
+  );
 
-    return (
-        <>
-           <div className="bg-gray-100 py-16 px-4 md:px-10">
-      <div className="max-w-7xl mx-auto">
+  return (
+    <div className="py-12 px-4 md:px-10 bg-gradient-to-br from-green-50 to-white">
 
-        {/* 🔥 Heading */}
-        <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            पुरस्कार
-          </h2>
+      {/* HEADING */}
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 flex justify-center items-center gap-2">
+        <Trophy className="text-yellow-500 w-8 h-8 animate-bounce" />
+        प्राप्त पुरस्कार
+      </h2>
 
-          {/* Divider */}
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <span className="w-12 h-[2px] bg-yellow-700"></span>
-            <span className="w-3 h-3 bg-yellow-700 rotate-45"></span>
-            <span className="w-12 h-[2px] bg-yellow-700"></span>
-          </div>
-        </div>
+      {/* TOTAL COUNT */}
+      <p className="text-center text-gray-600 mb-6">
+        एकूण पुरस्कार: <span className="font-bold text-green-600">{filteredAwards.length}</span>
+      </p>
 
-        {/* 🔥 Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* SEARCH */}
+      <div className="max-w-md mx-auto mb-8 relative">
+        <Search className="absolute left-3 top-3 text-gray-400" />
+        <input
+          type="text"
+          placeholder="पुरस्कार शोधा..."
+          className="w-full pl-10 pr-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-green-400"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+      </div>
 
-          {trophies.map((item, index) => (
-            <div
-              key={index}
-              className="relative bg-white rounded-lg shadow-sm p-8 text-center overflow-hidden group transition hover:shadow-md hover:scale-105"
-            >
-              {/* ✨ Dotted Hover Background */}
-              <div
-                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none
-                bg-[radial-gradient(#00000033_3px,transparent_3px)] 
-                bg-[size:30px_30px]"
-              ></div>
+      {/* AWARDS GRID */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-              {/* Content */}
-              <div className="relative z-10">
-                
-                {/* Icon */}
-                <div className="flex justify-center mb-5">
-                  <Trophy className="w-10 h-10 text-yellow-700" />
-                </div>
-
-                {/* Title */}
-                <h3 className="text-lg font-semibold text-gray-800 leading-relaxed mb-4">
-                  {item.title}
-                </h3>
-
-                {/* Year */}
-                <p className="text-yellow-700 font-bold">
-                  {item.year}
-                </p>
-
-              </div>
+        {filteredAwards.map((award, index) => (
+          <div
+            key={index}
+            className="group p-5 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 hover:-translate-y-2 border border-transparent hover:border-green-400"
+          >
+            {/* ICON */}
+            <div className="flex items-center gap-2 mb-3">
+              <Trophy className="text-yellow-500 group-hover:scale-110 transition" />
+              <span className="text-green-600 font-bold">{award.year}</span>
             </div>
-          ))}
 
-        </div>
+            {/* TEXT */}
+            <p className="text-gray-700 leading-relaxed group-hover:text-green-700 transition">
+              {award.text}
+            </p>
+          </div>
+        ))}
 
       </div>
     </div>
-        </>
-        )
-      }
+  );
+}
