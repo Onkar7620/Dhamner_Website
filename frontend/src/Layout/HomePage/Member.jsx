@@ -17,7 +17,7 @@ export default function Member() {
     
     {
       id: 3,
-      name: "सुप्रिया आजित पवार",
+      name: "सुनेत्रा आजित पवार",
       role: "माननीय उपमुख्यमंत्री",
       image: "/members/PM2.jpeg",
     },
