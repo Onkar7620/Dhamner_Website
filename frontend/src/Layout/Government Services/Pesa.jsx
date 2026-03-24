@@ -24,7 +24,7 @@ export default function PesaScheme() {
       <section className="px-6 md:px-20 py-12">
 
         <h2 className="text-3xl text-green-700 mb-6">
-          पैसा 5% अबंध निधी योजना (PESA 5% Untied Fund Scheme) – महाराष्ट्र शासन
+          पेसा 5% अबंध निधी योजना (PESA 5% Untied Fund Scheme) – महाराष्ट्र शासन
         </h2>
 
         <h3 className="text-xl mb-4">योजनेचा उद्देश:</h3>
