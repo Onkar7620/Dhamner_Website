@@ -66,7 +66,7 @@ export default function Footer() {
           <p className="mb-4">dhamner189585@gmail.com</p>
 
           <p className="font-semibold">पत्ता</p>
-          <p>धामणेर ता. रहमदपूर , जि. सातारा</p>
+          <p>धामणेर ता. रहीमतपूर  , जि. सातारा</p>
         </div>
       </div>
 
