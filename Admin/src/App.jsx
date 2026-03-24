@@ -1,6 +1,3 @@
-import { useEffect } from "react";
-import axios from "axios";
-
 import Navbar from './Components/Navbar'
 import { Routes, Route, useLocation } from 'react-router-dom'
 
@@ -29,13 +26,6 @@ function App() {
 
   // 👉 check login page
   const isLoginPage = location.pathname === "/";
-
-  // 🔥 Backend Wake-up Call
-  useEffect(() => {
-    axios.get("https://dhamner-website.onrender.com")
-      .then(() => console.log("Backend awakened (admin)"))
-      .catch(() => console.log("Wakeup failed"));
-  }, []);
 
   return (
     <>
@@ -68,6 +58,8 @@ function App() {
         <Route path="/admin/land-record" element={<ProtectedRoute><Land8ACertificate /></ProtectedRoute>} />
         <Route path="/admin/712" element={<ProtectedRoute><Land712Certificate /></ProtectedRoute>} />
       </Routes>
+
+    
     </>
   )
 }
