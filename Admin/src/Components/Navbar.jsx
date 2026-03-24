@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { Mail, Phone, Clock, Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
 
-  // ✅ ALL DAKHLE AS DIRECT TABS
+  const isLoggedIn = localStorage.getItem("token");
+
   const menuItems = [
     { name: "जन्म प्रमाणपत्र", link: "/admin/birth" },
     { name: "मृत्यू प्रमाणपत्र", link: "/admin/death" },
@@ -25,10 +27,15 @@ export default function Navbar() {
     { name: "समीक्षा विभाग", link: "/admin/reviews" },
   ];
 
+ const handleLogout = () => {
+  localStorage.removeItem("token");
+  navigate("/", { replace: true });
+};
+
   return (
     <div className="w-full shadow-sm top-0 z-50">
 
-      {/* 🔝 HEADER */}
+      {/* HEADER */}
       <div className="bg-white px-4 lg:px-10 py-4 flex flex-col lg:flex-row justify-between items-center gap-4">
 
         <div className="flex items-center">
@@ -73,39 +80,42 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* 🔻 DESKTOP NAV */}
-      <div className="hidden lg:flex flex-wrap justify-center gap-6 py-4 bg-gray-100 text-sm font-medium">
+      {/* NAV ONLY AFTER LOGIN */}
+      {isLoggedIn && (
+        <>
+          <div className="hidden lg:flex flex-wrap justify-center gap-6 py-4 bg-gray-100 text-sm font-medium">
+            {menuItems.map((item, index) => (
+              <Link key={index} to={item.link} className="hover:text-orange-500">
+                {item.name}
+              </Link>
+            ))}
 
-        {menuItems.map((item, index) => (
-          <Link
-            key={index}
-            to={item.link}
-            className="hover:text-orange-500 whitespace-nowrap"
-          >
-            {item.name}
-          </Link>
-        ))}
+            <button onClick={handleLogout} className="text-red-500 ml-4">
+              Logout
+            </button>
+          </div>
 
-      </div>
+          {/* MOBILE */}
+          {open && (
+            <div className="lg:hidden bg-gray-100 px-6 py-6 space-y-3 max-h-[80vh] overflow-y-auto">
+              {menuItems.map((item, index) => (
+                <Link
+                  key={index}
+                  to={item.link}
+                  onClick={() => setOpen(false)}
+                  className="block py-2 border-b"
+                >
+                  {item.name}
+                </Link>
+              ))}
 
-      {/* 📱 MOBILE MENU */}
-      {open && (
-        <div className="lg:hidden bg-gray-100 px-6 py-6 space-y-3 max-h-[80vh] overflow-y-auto">
-
-          {menuItems.map((item, index) => (
-            <Link
-              key={index}
-              to={item.link}
-              className="block py-2 border-b hover:text-orange-500"
-              onClick={() => setOpen(false)}
-            >
-              {item.name}
-            </Link>
-          ))}
-
-        </div>
+              <button onClick={handleLogout} className="text-red-500 mt-4">
+                Logout
+              </button>
+            </div>
+          )}
+        </>
       )}
-
     </div>
   );
 }

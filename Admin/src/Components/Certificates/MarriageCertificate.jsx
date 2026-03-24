@@ -1,17 +1,14 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import API from "../../utils/api";
 
 export default function MarriageCertificate() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // ✅ YOUR BACKEND ROUTE
-  const API = "http://localhost:5000/api/marriage-form";
-
   // ✅ FETCH DATA
   const fetchData = async () => {
     try {
-      const res = await axios.get(API);
+      const res = await API.get("/api/marriage-form");
       setData(res.data.data);
       setLoading(false);
     } catch (err) {
@@ -26,7 +23,7 @@ export default function MarriageCertificate() {
   // ✅ APPROVE
   const handleApprove = async (id) => {
     try {
-      await axios.patch(`${API}/${id}/status`, {
+      await API.patch(`/api/marriage-form/${id}/status`, {
         status: "approved",
       });
 
@@ -43,7 +40,7 @@ export default function MarriageCertificate() {
   // ❌ REJECT
   const handleReject = async (id) => {
     try {
-      await axios.patch(`${API}/${id}/status`, {
+      await API.patch(`/api/marriage-form/${id}/status`, {
         status: "rejected",
       });
 
@@ -60,7 +57,7 @@ export default function MarriageCertificate() {
   // 🗑️ DELETE
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`${API}/${id}`);
+      await API.delete(`/api/marriage-form/${id}`);
       setData((prev) => prev.filter((item) => item._id !== id));
     } catch (err) {
       console.error(err);
@@ -68,7 +65,11 @@ export default function MarriageCertificate() {
   };
 
   if (loading) {
-    return <p className="text-center mt-10 text-lg">Loading marriage certificates...</p>;
+    return (
+      <p className="text-center mt-10 text-lg">
+        Loading marriage certificates...
+      </p>
+    );
   }
 
   return (
@@ -135,23 +136,17 @@ export default function MarriageCertificate() {
                       className="w-16 h-16 object-cover rounded cursor-pointer hover:scale-110 transition"
                       onClick={() => window.open(item.screenshot, "_blank")}
                     />
-                  ) : (
-                    "-"
-                  )}
+                  ) : "-"}
                 </td>
 
-
                 {/* ACTIONS */}
-                <td className="px-3 py-2 flex flex-col gap-1">
-
-
+                <td className="px-3 py-2">
                   <button
                     onClick={() => handleDelete(item._id)}
                     className="bg-gray-700 text-white px-2 py-1 rounded text-xs hover:bg-gray-800"
                   >
                     Delete
                   </button>
-
                 </td>
 
               </tr>

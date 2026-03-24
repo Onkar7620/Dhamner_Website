@@ -1,17 +1,14 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import API from "../../utils/api";
 
 export default function BuildingPermissionCertificate() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // ✅ YOUR BACKEND ROUTE
-  const API = "http://localhost:5000/api/building-permission";
-
   // ✅ FETCH DATA
   const fetchData = async () => {
     try {
-      const res = await axios.get(API);
+      const res = await API.get("/api/building-permission");
       setData(res.data.data);
       setLoading(false);
     } catch (err) {
@@ -23,44 +20,10 @@ export default function BuildingPermissionCertificate() {
     fetchData();
   }, []);
 
-  // ✅ APPROVE
-  const handleApprove = async (id) => {
-    try {
-      await axios.patch(`${API}/${id}/status`, {
-        status: "approved",
-      });
-
-      setData((prev) =>
-        prev.map((item) =>
-          item._id === id ? { ...item, status: "approved" } : item
-        )
-      );
-    } catch (err) {
-      console.error(err);
-    }
-  };
-
-  // ❌ REJECT
-  const handleReject = async (id) => {
-    try {
-      await axios.patch(`${API}/${id}/status`, {
-        status: "rejected",
-      });
-
-      setData((prev) =>
-        prev.map((item) =>
-          item._id === id ? { ...item, status: "rejected" } : item
-        )
-      );
-    } catch (err) {
-      console.error(err);
-    }
-  };
-
   // 🗑️ DELETE
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`${API}/${id}`);
+      await API.delete(`/api/building-permission/${id}`);
       setData((prev) => prev.filter((item) => item._id !== id));
     } catch (err) {
       console.error(err);
@@ -166,15 +129,13 @@ export default function BuildingPermissionCertificate() {
                 </td>
 
                 {/* ACTIONS */}
-                <td className="px-3 py-2 flex flex-col gap-1">
-
+                <td className="px-3 py-2">
                   <button
                     onClick={() => handleDelete(item._id)}
                     className="bg-gray-700 text-white px-2 py-1 rounded text-xs"
                   >
                     Delete
                   </button>
-
                 </td>
 
               </tr>

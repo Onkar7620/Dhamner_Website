@@ -1,17 +1,14 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import API from "../../utils/api";
 
 export default function NoDues() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // ✅ YOUR BACKEND ROUTE
-  const API = "http://localhost:5000/api/no-dues";
-
   // ✅ FETCH DATA
   const fetchData = async () => {
     try {
-      const res = await axios.get(API);
+      const res = await API.get("/api/no-dues");
       setData(res.data.data);
       setLoading(false);
     } catch (err) {
@@ -26,7 +23,7 @@ export default function NoDues() {
   // ✅ APPROVE
   const handleApprove = async (id) => {
     try {
-      await axios.patch(`${API}/${id}/status`, {
+      await API.patch(`/api/no-dues/${id}/status`, {
         status: "approved",
       });
 
@@ -43,7 +40,7 @@ export default function NoDues() {
   // ❌ REJECT
   const handleReject = async (id) => {
     try {
-      await axios.patch(`${API}/${id}/status`, {
+      await API.patch(`/api/no-dues/${id}/status`, {
         status: "rejected",
       });
 
@@ -60,7 +57,7 @@ export default function NoDues() {
   // 🗑️ DELETE
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`${API}/${id}`);
+      await API.delete(`/api/no-dues/${id}`);
       setData((prev) => prev.filter((item) => item._id !== id));
     } catch (err) {
       console.error(err);
@@ -121,19 +118,14 @@ export default function NoDues() {
 
                 <td className="px-3 py-2">{item.year}</td>
 
- 
-
                 {/* ACTIONS */}
-                <td className="px-3 py-2 flex flex-col gap-1">
-
-
+                <td className="px-3 py-2">
                   <button
                     onClick={() => handleDelete(item._id)}
                     className="bg-gray-700 text-white px-2 py-1 rounded text-xs hover:bg-gray-800"
                   >
                     Delete
                   </button>
-
                 </td>
 
               </tr>

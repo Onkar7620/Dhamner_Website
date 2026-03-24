@@ -4,7 +4,7 @@ const businessController = require("../controllers/businessLicenseController");
 
 const { verifyToken } = require("../middleware/authMiddleware");
 
-router.post("/",verifyToken, businessController.createBusinessLicense);
+router.post("/", businessController.createBusinessLicense);
 router.get("/",verifyToken, businessController.getAllBusinessLicenses);
 router.get("/:id",verifyToken, businessController.getBusinessLicenseById);
 router.put("/:id",verifyToken, businessController.updateBusinessLicense);

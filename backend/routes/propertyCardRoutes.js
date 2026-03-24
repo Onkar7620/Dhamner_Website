@@ -4,7 +4,7 @@ const router = express.Router();
 const propertyCardController = require("../controllers/propertyCardController");
 const { verifyToken } = require("../middleware/authMiddleware");
 
-router.post("/",verifyToken, propertyCardController.createPropertyCard);
+router.post("/", propertyCardController.createPropertyCard);
 router.get("/",verifyToken, propertyCardController.getAllPropertyCards);
 router.get("/:id",verifyToken, propertyCardController.getPropertyCardById);
 router.put("/:id",verifyToken, propertyCardController.updatePropertyCard);
