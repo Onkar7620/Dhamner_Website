@@ -20,32 +20,31 @@ export default function Login() {
       );
 
       localStorage.setItem("token", res.data.token);
-     navigate("/admin/");
+
+      // ✅ IMPORTANT
+      navigate("/admin", { replace: true });
+
     } catch (err) {
-  console.log(err.response?.data); // 🔥 ADD THIS
-  console.log(err.message);
-  alert("Login failed ❌");
-}
+      console.log(err.response?.data);
+      alert("Invalid email or password ❌");
+    }
   };
 
   return (
     <div className="min-h-screen flex flex-col md:flex-row">
 
-      {/* LEFT SIDE (DESIGN) */}
       <div className="hidden md:flex w-1/2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white items-center justify-center p-10">
         <div className="max-w-md">
           <h1 className="text-4xl font-bold mb-4">
             Welcome Back 👋
           </h1>
           <p className="text-lg opacity-90">
-            Login to access the Admin Dashboard and manage all certificates, complaints, and services efficiently.
+            Login to access the Admin Dashboard.
           </p>
         </div>
       </div>
 
-      {/* RIGHT SIDE (FORM) */}
       <div className="flex w-full md:w-1/2 items-center justify-center bg-gray-100 p-6">
-
         <form
           onSubmit={handleLogin}
           className="bg-white w-full max-w-md p-8 rounded-2xl shadow-xl"
@@ -54,40 +53,29 @@ export default function Login() {
             Admin Login
           </h2>
 
-          {/* EMAIL */}
-          <div className="mb-4">
-            <label className="text-sm text-gray-600">Email</label>
-            <input
-              type="email"
-              name="email"
-              placeholder="Enter your email"
-              className="w-full mt-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-              onChange={handleChange}
-              required
-            />
-          </div>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            className="w-full p-3 border rounded-lg mb-4"
+            onChange={handleChange}
+            required
+          />
 
-          {/* PASSWORD */}
-          <div className="mb-6">
-            <label className="text-sm text-gray-600">Password</label>
-            <input
-              type="password"
-              name="password"
-              placeholder="Enter your password"
-              className="w-full mt-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-              onChange={handleChange}
-              required
-            />
-          </div>
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            className="w-full p-3 border rounded-lg mb-6"
+            onChange={handleChange}
+            required
+          />
 
-          {/* BUTTON */}
-          <button className="w-full bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-lg font-semibold transition">
+          <button className="w-full bg-blue-500 text-white p-3 rounded-lg">
             Login
           </button>
-
         </form>
       </div>
-
     </div>
   );
 }

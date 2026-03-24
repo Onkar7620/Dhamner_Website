@@ -3,7 +3,7 @@ const router = express.Router();
 const complaintController = require("../controllers/complaintController");
 const { verifyToken } = require("../middleware/authMiddleware");
 
-router.post("/",verifyToken, complaintController.createComplaint);
+router.post("/", complaintController.createComplaint);
 router.get("/",verifyToken, complaintController.getAllComplaints);
 router.get("/:id",verifyToken, complaintController.getComplaintById);
 router.put("/:id",verifyToken, complaintController.updateComplaint);

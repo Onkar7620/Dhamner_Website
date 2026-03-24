@@ -1,33 +1,29 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import API from "../../utils/api";
 
 export default function DeathCertificate() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  // ✅ FETCH DATA
   const fetchData = async () => {
-  try {
-    const token = localStorage.getItem("token");
+    try {
+      const res = await API.get("/api/death-form");
+      setData(res.data.data);
+      setLoading(false);
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
-    const res = await axios.get(
-      "http://localhost:5000/api/death-form",
-      {
-        headers: {
-          Authorization: token, // 🔥 IMPORTANT
-        },
-      }
-    );
-
-    setData(res.data.data);
-  } catch (err) {
-    console.log(err);
-  }
-};
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   // ✅ APPROVE
   const handleApprove = async (id) => {
     try {
-      await axios.patch(`${API}/${id}/status`, {
+      await API.patch(`/api/death-form/${id}/status`, {
         status: "approved",
       });
 
@@ -44,7 +40,7 @@ export default function DeathCertificate() {
   // ❌ REJECT
   const handleReject = async (id) => {
     try {
-      await axios.patch(`${API}/${id}/status`, {
+      await API.patch(`/api/death-form/${id}/status`, {
         status: "rejected",
       });
 
@@ -61,7 +57,7 @@ export default function DeathCertificate() {
   // 🗑️ DELETE
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`${API}/${id}`);
+      await API.delete(`/api/death-form/${id}`);
       setData((prev) => prev.filter((item) => item._id !== id));
     } catch (err) {
       console.error(err);
@@ -134,24 +130,17 @@ export default function DeathCertificate() {
                       className="w-16 h-16 object-cover rounded cursor-pointer hover:scale-110 transition"
                       onClick={() => window.open(item.screenshot, "_blank")}
                     />
-                  ) : (
-                    "-"
-                  )}
+                  ) : "-"}
                 </td>
 
-
                 {/* ACTIONS */}
-                <td className="px-3 py-2 flex flex-col gap-1">
-
-
-                  {/* DELETE */}
+                <td className="px-3 py-2">
                   <button
                     onClick={() => handleDelete(item._id)}
                     className="bg-gray-700 text-white px-2 py-1 rounded text-xs hover:bg-gray-800"
                   >
                     Delete
                   </button>
-
                 </td>
 
               </tr>

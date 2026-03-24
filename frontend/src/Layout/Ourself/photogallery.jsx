@@ -94,6 +94,44 @@ const galleryData = {
     "/gallery/vyamshala/WhatsApp Image 2026-03-04 at 2.01.53 PM (2).jpg.jpeg",
   
   ]
+  ,
+  लिज्जत_पापड :[
+   "/gallery/lijjat/IMG-20251118-WA0119.jpg.jpeg",
+   "/gallery/lijjat/IMG-20251118-WA0121.jpg.jpeg",
+   "/gallery/lijjat/IMG-20251118-WA0150.jpg.jpeg",
+  ],
+  गारमेन्ट:[
+     "/gallery/garmnet/WhatsApp Image 2026-03-21 at 12.21.35 PM.jpeg",
+    "/gallery/garmnet/IMG-20251118-WA0161.jpg.jpeg",
+    "/gallery/garmnet/IMG-20251118-WA0162.jpg.jpeg",
+    "/gallery/garmnet/IMG-20251118-WA0164.jpg.jpeg",
+  ],
+  स्मशानभूमी:[
+  "/gallery/smashan/WhatsApp Image 2026-03-21 at 5.52.4.jpeg",
+  "/gallery/smashan/WhatsApp Image 2026-03-21 at 5.52.43 .jpeg",
+  "/gallery/smashan/WhatsApp Image 2026-03-21 at 5.52.43 PM.jpeg",
+  ],
+  क्रीडासंकुलन :[
+  "/gallery/kridaSankulan/WhatsApp Image 2026-03-21 at 5.55.29 PM.jpeg",
+  "/gallery/kridaSankulan/WhatsApp Image 2026-03-21 at 5.55.29.jpeg",
+  ],
+  CCTV:[
+    "/gallery/CCTV/WhatsApp Image 2026-.jpeg",
+    "/gallery/CCTV/WhatsApp Image 2026-03-21 at .jpeg",
+    "/gallery/CCTV/WhatsApp Image 2026-03-21 at 2.17.24 PM.jpeg",
+    "/gallery/CCTV/WhatsApp Image 2026-03-21 at 5.48.14 PM.jpeg",
+    "/gallery/CCTV/WhatsApp Image 2026-03-21 at 5.48.15 .jpeg",
+    "/gallery/CCTV/WhatsApp Image 2026-03-21 at 5.48.15 PM.jpeg",
+    "/gallery/CCTV/WhatsApp Image 2026-03-21 at 5.48.16 PM.jpeg",
+    "/gallery/CCTV/WhatsApp Image 2026-03-21 at 5.48.17 .jpeg",
+    "/gallery/CCTV/WhatsApp Image 2026-03-21 at 5.48.17 PM.jpeg",
+
+  ],
+ ऑडिओ_सिस्टम :[
+  "/gallery/audioSys/WhatsApp Image 2026-03-21 at 5.48.09 PM.jpeg",
+  "/gallery/audioSys/WhatsApp Image 2026-03-21 at 5.48.10 PM.jpeg",
+  "/gallery/audioSys/WhatsApp Image 2026-03-21 at 5.48.13 PM.jpeg",
+ ]
 };
 
 export default function PhotoGallery() {

@@ -4,7 +4,7 @@ const buildingController = require("../controllers/buildingPermissionController"
 
 const { verifyToken } = require("../middleware/authMiddleware");
 
-router.post("/",verifyToken, buildingController.createBuildingPermission);
+router.post("/", buildingController.createBuildingPermission);
 router.get("/",verifyToken, buildingController.getAllBuildingPermissions);
 router.get("/:id",verifyToken, buildingController.getBuildingPermissionById);
 router.put("/:id",verifyToken, buildingController.updateBuildingPermission);

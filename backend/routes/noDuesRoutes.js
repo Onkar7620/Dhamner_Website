@@ -4,7 +4,7 @@ const noDuesController = require("../controllers/noDuesController");
 
 const { verifyToken } = require("../middleware/authMiddleware");
 
-router.post("/",verifyToken, noDuesController.createNoDues);
+router.post("/", noDuesController.createNoDues);
 router.get("/",verifyToken, noDuesController.getAllNoDues);
 router.get("/:id",verifyToken, noDuesController.getNoDuesById);
 router.put("/:id",verifyToken, noDuesController.updateNoDues);

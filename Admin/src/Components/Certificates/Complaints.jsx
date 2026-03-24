@@ -1,16 +1,14 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import API from "../../utils/api";
 
 export default function Complaints() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const API = "http://localhost:5000/api/complaints"; // change if needed
-
   // ✅ FETCH DATA
   const fetchData = async () => {
     try {
-      const res = await axios.get(API);
+      const res = await API.get("/api/complaints");
       setData(res.data.data);
       setLoading(false);
     } catch (err) {
@@ -25,9 +23,8 @@ export default function Complaints() {
   // ✅ UPDATE STATUS
   const updateStatus = async (id, status) => {
     try {
-      await axios.patch(`${API}/${id}/status`, { status });
+      await API.patch(`/api/complaints/${id}/status`, { status });
 
-      // update UI instantly
       setData((prev) =>
         prev.map((item) =>
           item._id === id ? { ...item, status } : item
@@ -38,10 +35,10 @@ export default function Complaints() {
     }
   };
 
-  // ✅ DELETE
+  // 🗑️ DELETE
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`${API}/${id}`);
+      await API.delete(`/api/complaints/${id}`);
       setData((prev) => prev.filter((item) => item._id !== id));
     } catch (err) {
       console.error(err);
@@ -88,20 +85,14 @@ export default function Complaints() {
                 <td className="px-3 py-2">{item.mobile}</td>
                 <td className="px-3 py-2">{item.aadhaar}</td>
 
-
                 {/* ACTIONS */}
                 <td className="px-3 py-2 flex flex-col gap-1">
-
-
-
-                  {/* DELETE */}
                   <button
                     onClick={() => handleDelete(item._id)}
                     className="bg-red-500 text-white px-2 py-1 rounded text-xs hover:bg-red-600"
                   >
                     Delete
                   </button>
-
                 </td>
 
               </tr>

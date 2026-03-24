@@ -1,17 +1,14 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import API from "../../utils/api";
 
 export default function Land712Certificate() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // ✅ YOUR BACKEND ROUTE
-  const API = "http://localhost:5000/api/land712";
-
   // ✅ FETCH DATA
   const fetchData = async () => {
     try {
-      const res = await axios.get(API);
+      const res = await API.get("/api/land712");
       setData(res.data.data);
       setLoading(false);
     } catch (err) {
@@ -26,7 +23,7 @@ export default function Land712Certificate() {
   // ✅ APPROVE
   const handleApprove = async (id) => {
     try {
-      await axios.patch(`${API}/${id}/status`, {
+      await API.patch(`/api/land712/${id}/status`, {
         status: "approved",
       });
 
@@ -43,7 +40,7 @@ export default function Land712Certificate() {
   // ❌ REJECT
   const handleReject = async (id) => {
     try {
-      await axios.patch(`${API}/${id}/status`, {
+      await API.patch(`/api/land712/${id}/status`, {
         status: "rejected",
       });
 
@@ -60,7 +57,7 @@ export default function Land712Certificate() {
   // 🗑️ DELETE
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`${API}/${id}`);
+      await API.delete(`/api/land712/${id}`);
       setData((prev) => prev.filter((item) => item._id !== id));
     } catch (err) {
       console.error(err);
@@ -122,22 +119,17 @@ export default function Land712Certificate() {
                       className="w-14 h-14 object-cover rounded cursor-pointer hover:scale-110 transition"
                       onClick={() => window.open(item.screenshot, "_blank")}
                     />
-                  ) : (
-                    "-"
-                  )}
+                  ) : "-"}
                 </td>
 
-
                 {/* ACTIONS */}
-                <td className="px-3 py-2 flex flex-col gap-1">
-
+                <td className="px-3 py-2">
                   <button
                     onClick={() => handleDelete(item._id)}
                     className="bg-gray-700 text-white px-2 py-1 rounded text-xs hover:bg-gray-800"
                   >
                     Delete
                   </button>
-
                 </td>
 
               </tr>
