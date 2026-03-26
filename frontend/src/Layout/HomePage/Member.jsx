@@ -4,17 +4,16 @@ export default function Member() {
   const ministers = [
      {
       id: 1,
-      name: "एकनाथ शिंदे",
-      role: "माननीय उपमुख्यमंत्री",
-      image: "/members/PM1.jpeg",
-    },
-    {
-      id: 2,
       name: "देवेंद्र फडणवीस",
       role: "माननीय मुख्यमंत्री",
       image: "/members/PM.jpeg",
     },
-    
+     {
+      id:2,
+      name: "एकनाथ शिंदे",
+      role: "माननीय उपमुख्यमंत्री",
+      image: "/members/PM1.jpeg",
+    },
     {
       id: 3,
       name: "सुनेत्रा आजित पवार",
