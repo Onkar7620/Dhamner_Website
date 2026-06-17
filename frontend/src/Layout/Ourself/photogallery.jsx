@@ -38,7 +38,7 @@ const galleryData = {
    "/gallery/jilhastariy/WhatsApp Image 2026-06-17 at 11.jpeg"
    
   ],
-   तालुकस्तरीय_तपासणी: [
+   तालुकास्तरीय_तपासणी: [
    " /gallery/talukastariy/IMG_3576.JPG.jpeg",
     "/gallery/talukastariy/IMG_3605.JPG.jpeg",
     "/gallery/talukastariy/IMG_3612.JPG.jpeg",
