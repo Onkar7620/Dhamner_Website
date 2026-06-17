@@ -39,8 +39,8 @@ const galleryData = {
    
   ],
    तालुकस्तरीय_तपासणी: [
-   " ",
-    "",
+   " /gallery/talukastariy/IMG_3576.JPG.jpeg",
+    "/gallery/talukastariy/IMG_3605.JPG.jpeg",
     "/gallery/talukastariy/IMG_3612.JPG.jpeg",
     "/gallery/talukastariy/IMG_3620.JPG.jpeg",
     "/gallery/talukastariy/IMG_3630.JPG.jpeg",
