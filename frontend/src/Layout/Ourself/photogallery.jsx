@@ -185,6 +185,8 @@ const galleryData = {
 const categoryTranslations = {
   gramPanchayat: { mr: "ग्रामपंचायत", en: "Gram Panchayat" },
   gramSabha: { mr: "ग्रामसभा", en: "Gram Sabha" },
+  jilhastariy: { mr: "जिल्हास्तरीय तपासणी", en: "District Level Inspection" },
+  talukastariy: { mr: "तालुकास्तरीय तपासणी", en: "Taluka Level Inspection" },
   aiLab: { mr: "AI Lab", en: "AI Lab" },
   healthCamp: { mr: "आरोग्यशिबीर", en: "Health Camp" },
   cleanliness: { mr: "ग्रामस्वछता", en: "Cleanliness" },
@@ -208,6 +210,8 @@ const categoryTranslations = {
 const categoryKeyMap = {
   "ग्रामपंचायत": "gramPanchayat",
   "ग्रामसभा": "gramSabha",
+  "जिल्हास्तरीय_तपासणी": "jilhastariy",
+  "तालुकास्तरीय_तपासणी": "talukastariy",
   "AI_Lab": "aiLab",
   "आरोग्यशिबीर": "healthCamp",
   "ग्रामस्वछता": "cleanliness",
