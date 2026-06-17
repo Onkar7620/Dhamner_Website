@@ -23,6 +23,36 @@ const galleryData = {
     "/gallery/GramSabha/1758123139446.jpg.jpeg",
     " /gallery/GramSabha/1758123139453.jpg.jpeg",
   ],
+    जिल्हास्तरीय_तपासणी: [
+   "/gallery/jilhastariy/WhatsApp Image 2026-0.jpeg ",
+    "/gallery/jilhastariy/WhatsApp Image 2026-06-17 .jpeg",
+    "/gallery/jilhastariy/WhatsApp Image 2026-06-17 at .jpeg",
+    "/gallery/jilhastariy/WhatsApp Image 2026-06-17 at 1.jpeg",
+    "/gallery/jilhastariy/WhatsApp Image 2026-06-17 at 11.00..jpeg",
+    "/gallery/jilhastariy/WhatsApp Image 2026-06-17 at 11.00.1.jpeg",
+    "/gallery/jilhastariy/WhatsApp Image 2026-06-17 at 11.00.16 .jpeg",
+   "/gallery/jilhastariy/WhatsApp Image 2026-06-17 at 11.00.16 A.jpeg",
+   "/gallery/jilhastariy/WhatsApp Image 2026-06-17 at 11.00.16 AM.jpeg",
+   "/gallery/jilhastariy/WhatsApp Image 2026-06-17 at 11.00.18 AM.jpeg",
+   "/gallery/jilhastariy/WhatsApp Image 2026-06-17 at 11.0.jpeg",
+   "/gallery/jilhastariy/WhatsApp Image 2026-06-17 at 11.jpeg"
+   
+  ],
+   तालुकस्तरीय_तपासणी: [
+   " ",
+    "",
+    "/gallery/talukastariy/IMG_3612.JPG.jpeg",
+    "/gallery/talukastariy/IMG_3620.JPG.jpeg",
+    "/gallery/talukastariy/IMG_3630.JPG.jpeg",
+    "/gallery/talukastariy/IMG_3639.JPG.jpeg",
+    "/gallery/talukastariy/IMG_3645.JPG.jpeg",
+   "/gallery/talukastariy/IMG_3663.JPG.jpeg",
+   "/gallery/talukastariy/IMG_3669.JPG.jpeg",
+   "/gallery/talukastariy/IMG_3682.JPG.jpeg",
+   "/gallery/talukastariy/IMG_3684.JPG.jpeg",
+   "/gallery/talukastariy/IMG_3685.JPG.jpeg"
+   
+  ],
   AI_Lab:[
     "/gallery/AiLab/61ea6974-d6ea-4196-9c32-e90397712c80.jpg",
     "/gallery/AiLab/91dc6a14-c6c8-4b8a-9535-43caedf9e6ce.jpg",
